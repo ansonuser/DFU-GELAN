@@ -45,11 +45,11 @@
         - How many stages/How many models does a data scientist recommend as a whole solution?
     - Validation
         - How to make sure that an AI model build is useful for real life use case?  
-    - __Note__: 
-        - Elaboration to the items above are very much valued. 
-        - Other aspects which are not written above are welcome to be included. 
-        - Fact-based justifications including the reference to papers/technical write ups is recommended.
-        - Please note that this is an open ended question and the ability to provide valuable insights into how to build a robust and complete Diabetic Foot Wound solution is of significant importance
+- __Note__: 
+    - Elaboration to the items above are very much valued. 
+    - Other aspects which are not written above are welcome to be included. 
+    - Fact-based justifications including the reference to papers/technical write ups is welcomed.
+    - Please note that this is an open ended question and the ability to provide valuable insights into how to build a robust and complete Diabetic Foot Wound solution is of significant importance
 
 ## How to Submit Take Home Assignment
 
