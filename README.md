@@ -3,7 +3,7 @@
 python >= 3.9
 
 ```bash
-$ cd DFU-GELAN
+$ cd DFU-GELAN/code
 $ pip install -r requirements.txt
 $ export PYTHONPATH=.
 ```
@@ -14,8 +14,8 @@ $ export PYTHONPATH=.
 ```bash
 $ export path_to_data_skin=path to foot-wound-other-wound-split
 $ export path_to_data_other=path to foot-wound-other-wound-other
-$ mv $path_to_data_skin . 
-$ mv $path_to_data_skin .
+$ mv -r $path_to_data_skin .. 
+$ mv $path_to_data_skin ..
 ```
 Download [gelan](https://github.com/WongKinYiu/yolov9/releases/download/v0.1/gelan-c.pt) and move it to yolov9/weights
 
@@ -23,10 +23,6 @@ Download [gelan](https://github.com/WongKinYiu/yolov9/releases/download/v0.1/gel
 
 ## Provided preliminary statistics/data analysis towards the dataset
 1. Image size analysis
-
-```bash
-$cd code
-```
 
 See "code\pre-analysis.ipynb"
 
