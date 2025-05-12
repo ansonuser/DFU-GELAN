@@ -3,7 +3,7 @@
 python >= 3.9
 
 ```
-$ pip install -r requirement.txt
+$ pip install -r requirements.txt
 $ export PYTHONPATH=.
 ```
 
