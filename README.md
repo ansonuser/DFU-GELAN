@@ -3,6 +3,7 @@
 python >= 3.9
 
 ```
+$ cd DFU-GELAN
 $ pip install -r requirements.txt
 $ export PYTHONPATH=.
 ```
@@ -28,7 +29,7 @@ See "code\pre-analysis.ipynb"
 
 The winner of DFU classfication task use HardNet which follows the densenet structure. However, this structure was found inefficient gradient use which degrades the model. I utilize backbone of YOLOV9, GELAN which has abundant and efficient gradient flow.
 
-1. Classification of Healthy Skin and Ulcer
+#### 1. Classification of Healthy Skin and Ulcer
 
 ```
 # Split train test
@@ -53,9 +54,8 @@ Testing result:
 - Accuracy: 98.5%
 - Recall: 98%
 
-2. Classification of Foot Wound and Other Wound
-- Preprocess:
-    
+#### 2. Classification of Foot Wound and Other Wound
+NN-Based model only use small size (resize to 224x380)
 - Data Issue
     - Validate with both NN-based method and simple logit regression:
         - Simple logit regression got test accuracy around 85%-92% (depends on seed)
