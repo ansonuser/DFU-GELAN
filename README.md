@@ -2,7 +2,7 @@
 
 python >= 3.9
 
-```
+```bash
 $ cd DFU-GELAN
 $ pip install -r requirements.txt
 $ export PYTHONPATH=.
@@ -23,7 +23,13 @@ Download [gelan](https://github.com/WongKinYiu/yolov9/releases/download/v0.1/gel
 
 ## Provided preliminary statistics/data analysis towards the dataset
 1. Image size analysis
+
+```bash
+$cd code
+```
+
 See "code\pre-analysis.ipynb"
+
 
 ## Classification
 
@@ -31,11 +37,18 @@ The winner of DFU classfication task use HardNet which follows the densenet stru
 
 #### 1. Classification of Healthy Skin and Ulcer
 
-```
+You can retrain 
+
+```bash
 # Split train test
 $ python3 preprocess.py
 # training a classification model
 $ python3 train_skin.py --cat skin
+```
+
+Or download model [here](https://github.com/ansonuser/DFU-GELAN/releases/download/v1.0/skin_augment_final.pt)
+
+```bash
 # generate test prediction
 $ python3 inference_skin.py --weights $path_to_weights
 # post-analysis of the model performance fail on which images
@@ -60,6 +73,22 @@ NN-Based model only use small size (resize to 224x380)
     - Validate with both NN-based method and simple logit regression:
         - Simple logit regression got test accuracy around 85%-92% (depends on seed)
         - GELAN + classified head shows test loss increases while train loss decreasing even with strong regularization. (Augmentation makes it worse)
+
+Training models:
+1. Logit Regression
+
+```bash
+$ python classification2
+```
+
+2. GELAN 
+
+```bash
+$ python3 train_skin.py --cat other
+```
+
+or download [here](https://github.com/ansonuser/DFU-GELAN/releases/download/v1.0/other_augment_final.pt)
+
 ![test loss of gelan](images/test_loss_c2.png)
 ![train loss of gelan](images/train_loss_c2.png)
 
@@ -158,7 +187,7 @@ $ mlflow server --host 127.0.0.1 --port 8888
   * Consistency with physician risk assessment.
 
 
-[Referene]
+## Referene
 - Wang X, et al, Diabetic foot ulcer, World J Diabetes 2022; 13(12): 1049-1065 
 - TY Liao et al, HarDNet-DFUS, CVPR, 2022
 - CY Wang et al, YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information, CVPR, 2024
