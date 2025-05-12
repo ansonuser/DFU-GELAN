@@ -68,7 +68,7 @@ Testing result:
 - Recall: 98%
 
 #### 2. Classification of Foot Wound and Other Wound
-NN-Based model only use small size (resize to 224x380)
+NN-Based model only use small size (resize to 380x224)
 - Data Issue
     - Validate with both NN-based method and simple logit regression:
         - Simple logit regression got test accuracy around 85%-92% (depends on seed)

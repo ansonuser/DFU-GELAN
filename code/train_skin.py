@@ -95,10 +95,11 @@ def train():
     if datacat == "skin":
         data_dir = pathlib.Path(f"../dataset_{datacat}")
         imgsz = (224, 224)
- 
+        epochs = 200
     else:
         data_dir = pathlib.Path(f"../dataset_{datacat}/phase1")
         imgsz = (380, 224)
+        epochs = 65
     augment = True
     device = "cuda"
     bs = 16
@@ -114,7 +115,7 @@ def train():
                             augment=augment,
                             rank=LOCAL_RANK,
                             workers=nw)
-    epochs = 65
+    
     
     opt.epochs = epochs
     opt.batch_size = bs
