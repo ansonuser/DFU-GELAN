@@ -1,0 +1,13 @@
+yolov9/.git
+*.pt
+*.jpg
+*.png
+*.jpeg
+*.JPG
+*.PNG
+*.JPEG
+foot-wound-healthy-skin-split
+foot-wound-other-wound-split
+runs
+mlruns
+*.pyc
